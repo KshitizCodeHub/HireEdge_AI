@@ -37,10 +37,23 @@ graph TB
     
     P --> Q[Session Persistence Storage]
     
-    style A fill:#e1f5fe
-    style C fill:#fff3e0
-    style P fill:#f3e5f5
-    style Q fill:#e8f5e8
+    style A fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
+    style B fill:#4CAF50,stroke:#388E3C,stroke-width:2px,color:#fff
+    style C fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style D fill:#9C27B0,stroke:#7B1FA2,stroke-width:2px,color:#fff
+    style E fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
+    style F fill:#4CAF50,stroke:#388E3C,stroke-width:2px,color:#fff
+    style G fill:#9C27B0,stroke:#7B1FA2,stroke-width:2px,color:#fff
+    style H fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
+    style I fill:#607D8B,stroke:#455A64,stroke-width:2px,color:#fff
+    style J fill:#795548,stroke:#5D4037,stroke-width:2px,color:#fff
+    style K fill:#795548,stroke:#5D4037,stroke-width:2px,color:#fff
+    style L fill:#795548,stroke:#5D4037,stroke-width:2px,color:#fff
+    style M fill:#9C27B0,stroke:#7B1FA2,stroke-width:2px,color:#fff
+    style N fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
+    style O fill:#9C27B0,stroke:#7B1FA2,stroke-width:2px,color:#fff
+    style P fill:#E91E63,stroke:#C2185B,stroke-width:2px,color:#fff
+    style Q fill:#4CAF50,stroke:#388E3C,stroke-width:2px,color:#fff
 ```
 
 ## What is HireEdge AI?
