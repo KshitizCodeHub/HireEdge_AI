@@ -1,4 +1,4 @@
-# ⚡ HireEdge AI - Your AI-Powered Career Strategist
+# HireEdge AI - Your AI-Powered Career Strategist
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
@@ -7,7 +7,43 @@
 
 > **Get the competitive edge in your placement season with advanced AI-powered career optimization tools.**
 
-## 🎯 What is HireEdge AI?
+## System Architecture Flow
+
+```mermaid
+graph TB
+    A[User Upload Resume] --> B[Resume Analysis Engine]
+    B --> C[Google Gemini AI Processing]
+    C --> D[Comprehensive Analysis Report]
+    
+    E[Job Description Input] --> F[Job Matching Algorithm]
+    F --> C
+    C --> G[Compatibility Score & Gap Analysis]
+    
+    H[Company Name Input] --> I[Multi-API Research Engine]
+    I --> J[News API]
+    I --> K[Alpha Vantage API]
+    I --> L[SERP API]
+    J --> M[Company Intelligence Report]
+    K --> M
+    L --> M
+    
+    N[Interview Preparation] --> C
+    C --> O[Customized Interview Questions]
+    
+    D --> P[Career Dashboard]
+    G --> P
+    M --> P
+    O --> P
+    
+    P --> Q[Session Persistence Storage]
+    
+    style A fill:#e1f5fe
+    style C fill:#fff3e0
+    style P fill:#f3e5f5
+    style Q fill:#e8f5e8
+```
+
+## What is HireEdge AI?
 
 HireEdge AI is a comprehensive career assistant that gives you the **competitive advantage** in your job search and placement preparation. Unlike generic career tools, HireEdge AI provides:
 
@@ -17,30 +53,30 @@ HireEdge AI is a comprehensive career assistant that gives you the **competitive
 - **AI-Driven Interview Preparation** tailored to specific roles
 - **Persistent Data Management** across all career activities
 
-## ⚡ Key Features
+## Core Features
 
-### 🎨 **Professional Dark Theme UI**
+### Professional Dark Theme UI
 - Sleek, modern interface designed for extended use
 - Natural scrolling and responsive design
 - Compact sidebar with session management
 
-### 🧠 **Advanced AI Analysis**
+### Advanced AI Analysis
 - **Google Gemini 2.5 Flash** integration for intelligent insights
 - **Comprehensive HTML cleaning** for pristine output
 - **Multi-layered analysis** across all career components
 
-### 🔄 **Complete Session Persistence**
+### Complete Session Persistence
 - All analyses saved with timestamps
 - Cross-section data availability
 - Debug storage tracking for transparency
 
-### 🌐 **Real-Time API Integration**
+### Real-Time API Integration
 - **News API** for latest company updates
 - **Adzuna Jobs API** for market insights
 - **Alpha Vantage** for financial data
 - **SERP API** for comprehensive research
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.8 or higher
@@ -51,7 +87,7 @@ HireEdge AI is a comprehensive career assistant that gives you the **competitive
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/hireedge-ai.git
+   git clone https://github.com/KshitizCodeHub/HireEdge-AI.git
    cd "HireEdge AI"
    ```
 
@@ -82,34 +118,53 @@ HireEdge AI is a comprehensive career assistant that gives you the **competitive
 5. **Open in browser**
    Navigate to `http://localhost:8501`
 
-## 📊 How to Use HireEdge AI
+## Demo & Screenshots
 
-### 1. **📝 Resume Optimization**
+### Application Flow
+```
+User Journey:
+Upload Resume → AI Analysis → Job Description Input → Company Research → Interview Prep → Career Dashboard
+     ↓               ↓              ↓                     ↓                 ↓              ↓
+   PDF Parse    Gemini AI     Compatibility      Multi-API Fetch    Question Gen   Session Store
+```
+
+### Key Capabilities
+| Feature | Technology | Output |
+|---------|------------|--------|
+| Resume Analysis | Google Gemini AI | Detailed feedback, improvement suggestions |
+| Company Research | News API + Alpha Vantage | Real-time company insights, financial data |
+| Job Matching | AI Compatibility Algorithm | Match percentage, skill gap analysis |
+| Interview Prep | Context-aware AI | Customized questions, company-specific prep |
+| Data Persistence | Streamlit Session State | Cross-session availability, debug tracking |
+
+## How to Use HireEdge AI
+
+### Resume Optimization
 - Upload your resume (PDF or text)
 - Get AI-powered analysis and suggestions
 - View detailed improvement recommendations
 
-### 2. **🎯 Job Matching** 
+### Job Matching
 - Input job descriptions
 - Get compatibility scores and gap analysis
 - Receive targeted improvement strategies
 
-### 3. **🏢 Company Intelligence**
+### Company Intelligence
 - Research target companies with real-time data
 - Get latest news, financial insights, and market position
 - Prepare strategic talking points for interviews
 
-### 4. **💼 Interview Preparation**
+### Interview Preparation
 - Generate customized interview questions
 - Get behavioral and technical question sets
 - Receive company-specific preparation guides
 
-### 5. **📊 Career Dashboard**
+### Career Dashboard
 - View all analyses in one place
 - Track your preparation progress
 - Access comprehensive career overview
 
-## 🛠️ Technical Architecture
+## Technical Architecture
 
 ```
 HireEdge AI
@@ -127,36 +182,36 @@ HireEdge AI
 - **Data Processing**: PyPDF2, pdfplumber for resume parsing
 - **Session Management**: Streamlit session state with persistence
 
-## 🎨 Features Showcase
+## Features Showcase
 
-### ⚡ **Smart Analysis Dashboard**
+### Smart Analysis Dashboard
 ```
-📊 HireEdge Complete Career Analysis
+HireEdge Complete Career Analysis
 ├── Resume Strength: 85/100
 ├── Company Research: 3 companies analyzed
 ├── Job Matches: 92% compatibility
 └── Interview Prep: 15 questions generated
 ```
 
-### 🏢 **Company Intelligence Sample**
+### Company Intelligence Sample
 ```
-🏢 Google Research Summary
-├── 📰 Latest News: 5 recent articles
-├── 💰 Stock Performance: +12.5% YTD
-├── 🎯 Key Insights: AI focus, cloud growth
-└── 💡 Interview Prep: Strategic talking points
+Google Research Summary
+├── Latest News: 5 recent articles
+├── Stock Performance: +12.5% YTD
+├── Key Insights: AI focus, cloud growth
+└── Interview Prep: Strategic talking points
 ```
 
-### 🎯 **Job Match Analysis**
+### Job Match Analysis
 ```
-🎯 Software Engineer @ Google
+Software Engineer @ Google
 ├── Compatibility Score: 92/100
 ├── Matching Skills: Python, AI/ML, Cloud
 ├── Gap Areas: Kubernetes, System Design
 └── Recommendations: 3 improvement areas
 ```
 
-## 🔧 Configuration Options
+## Configuration Options
 
 ### API Keys Setup
 All API integrations are optional but recommended for full functionality:
@@ -173,7 +228,7 @@ All API integrations are optional but recommended for full functionality:
 - **Session Management**: View cross-section data availability
 - **Clear Data**: Reset all session information
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
@@ -183,17 +238,17 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 - New analysis features
 - Documentation enhancements
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🆘 Support
+## Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/hireedge-ai/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/hireedge-ai/discussions)
-- **Email**: [Update with your contact email]
+- **Issues**: [GitHub Issues](https://github.com/KshitizCodeHub/HireEdge-AI/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/KshitizCodeHub/HireEdge-AI/discussions)
+- **Connect**: [Kshitiz's GitHub Profile](https://github.com/KshitizCodeHub)
 
-## 🌟 Acknowledgments
+## Acknowledgments
 
 - **Google Gemini** for advanced AI capabilities
 - **Streamlit** for the amazing web framework
@@ -204,10 +259,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**⚡ HireEdge AI - Your AI-Powered Career Strategist**
+**HireEdge AI - Your AI-Powered Career Strategist**
 
 *Get the competitive edge in your placement season!*
 
-[![Star this repo](https://img.shields.io/github/stars/yourusername/hireedge-ai?style=social)](https://github.com/yourusername/hireedge-ai)
+[![Star this repo](https://img.shields.io/github/stars/KshitizCodeHub/HireEdge-AI?style=social)](https://github.com/KshitizCodeHub/HireEdge-AI)
 
 </div>
