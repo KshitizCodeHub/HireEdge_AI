@@ -4,8 +4,15 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
 [![AI Powered](https://img.shields.io/badge/AI-Powered-green.svg)](https://cloud.google.com/ai)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit%20Cloud-FF4B4B.svg)](https://hire-edge-ai.streamlit.app/)
 
 > **Get the competitive edge in your placement season with advanced AI-powered career optimization tools.**
+
+## 🚀 Live Demo
+
+**Try HireEdge AI now:** [https://hire-edge-ai.streamlit.app/](https://hire-edge-ai.streamlit.app/)
+
+*Experience the full power of AI-driven career optimization - upload your resume, analyze job matches, research companies, and get interview preparation - all in one platform!*
 
 ## System Architecture Flow
 
@@ -275,6 +282,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **HireEdge AI - Your AI-Powered Career Strategist**
 
 *Get the competitive edge in your placement season!*
+
+[![Live Demo](https://img.shields.io/badge/🚀%20Try%20Live%20Demo-FF4B4B?style=for-the-badge)](https://hire-edge-ai.streamlit.app/)
 
 [![Star this repo](https://img.shields.io/github/stars/KshitizCodeHub/HireEdge-AI?style=social)](https://github.com/KshitizCodeHub/HireEdge-AI)
 
