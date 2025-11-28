@@ -10,8 +10,21 @@ from bs4 import BeautifulSoup
 from advanced_tools import CompanyResearcher, JobMatcher, InterviewPrep, ResumeAnalyzer
 import pdfplumber
 import time
+import streamlit as st
 
+# Load environment variables
 load_dotenv()
+
+def get_api_key(key_name: str) -> str:
+    """Get API key from Streamlit secrets or environment variables"""
+    try:
+        # Try Streamlit secrets first (for cloud deployment)
+        if hasattr(st, 'secrets') and key_name in st.secrets:
+            return st.secrets[key_name]
+        # Fall back to environment variables (for local development)
+        return os.getenv(key_name, '')
+    except:
+        return os.getenv(key_name, '')
 
 # HTML cleaning function
 def clean_html_tags(text: str) -> str:
@@ -74,7 +87,7 @@ def clean_html_tags(text: str) -> str:
 try:
     llm = ChatGoogleGenerativeAI(
         model="gemini-2.5-flash",
-        google_api_key=os.getenv("GOOGLE_API_KEY"),
+        google_api_key=get_api_key("GOOGLE_API_KEY"),
         temperature=0.3
     )
 except Exception as e:

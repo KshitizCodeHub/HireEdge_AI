@@ -3,17 +3,29 @@ import json
 from typing import Dict, List, Optional
 import os
 from dotenv import load_dotenv
+import streamlit as st
 
 load_dotenv()
+
+def get_api_key(key_name: str) -> str:
+    """Get API key from Streamlit secrets or environment variables"""
+    try:
+        # Try Streamlit secrets first (for cloud deployment)
+        if hasattr(st, 'secrets') and key_name in st.secrets:
+            return st.secrets[key_name]
+        # Fall back to environment variables (for local development)
+        return os.getenv(key_name, '')
+    except:
+        return os.getenv(key_name, '')
 
 class CompanyResearcher:
     """Advanced company research using multiple data sources"""
     
     def __init__(self):
-        self.news_api_key = os.getenv('NEWS_API_KEY')
-        self.serpapi_key = os.getenv('SERP_API_KEY')
-        self.alpha_vantage_key = os.getenv('ALPHA_VANTAGE_API_KEY')
-        self.finnhub_key = os.getenv('FINNHUB_API_KEY')
+        self.news_api_key = get_api_key('NEWS_API_KEY')
+        self.serpapi_key = get_api_key('SERP_API_KEY')
+        self.alpha_vantage_key = get_api_key('ALPHA_VANTAGE_API_KEY')
+        self.finnhub_key = get_api_key('FINNHUB_API_KEY')
         
     def get_company_news(self, company_name: str, days: int = 30) -> List[Dict]:
         """Get recent news about the company using News API"""
